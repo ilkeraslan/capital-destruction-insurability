@@ -1,0 +1,145 @@
+Frontiers
+  s_c (assets equal other claims), = 5 - sqrt(24)                0.1010
+  full-payment frontier of the senior claim                      0.5000
+  no other claims, claim of 0.1 of the assets: s_1               0.6838
+  no other claims, claim of 0.001 of the assets: s_1             0.9684
+
+Table 3: the same claim under different conditions of payment (severity 0.2)
+  A extinction                                                   backing None  paid 0.0000  price 0.000 c  implied(full) 0.000%  implied(known) none
+  B intact, C = 0.8, equal                                       backing 1.0  paid 1.0000  price 2.000 c  implied(full) 2.000%  implied(known) 2.000%
+  C eroded, C = 0.8, equal                                       backing 0.6400000000000001  paid 0.8000  price 1.600 c  implied(full) 1.600%  implied(known) 2.000%
+  D intact, C = 1.6, equal                                       backing 1.0  paid 0.6250  price 1.250 c  implied(full) 1.250%  implied(known) 2.000%
+  E eroded, C = 1.6, equal                                       backing 0.6400000000000001  paid 0.4000  price 0.800 c  implied(full) 0.800%  implied(known) 2.000%
+  F eroded, C = 1.6, senior class 0.25                           backing 0.6400000000000001  paid 1.0000  price 2.000 c  implied(full) 2.000%  implied(known) 2.000%
+  G eroded, C = 1.6, subordinated                                backing 0.6400000000000001  paid 0.0000  price 0.000 c  implied(full) 0.000%  implied(known) none
+  H own collateral, value unaffected                             backing 1.0  paid 1.0000  price 2.000 c  implied(full) 2.000%  implied(known) 2.000%
+  I own collateral, value falls as (1-s)^2                       backing 0.6400000000000001  paid 0.6400  price 1.280 c  implied(full) 1.280%  implied(known) 2.000%
+  claim of USD 1 billion in row E: recovery                      0.39975
+  row E with theta = 1: recovery                                 0.500
+  price ratio B/C (destruction, other claims 0.8)                1.250
+  price ratio D/E (destruction, other claims 1.6)                1.5625
+  price ratio B/D (added claims, intact assets)                  1.600
+  price ratio C/E (added claims, eroded assets)                  2.000
+  row C: largest other claims paid in full at s = 0.2            0.64
+
+Table 4: five economies with a price of 1 cent (equal priority, C = 8s)
+  severity 0.1                                                   loss 10  backing 0.81  claims 0.80  paid 100.00 c  p 1.000%  expected loss 0.100
+  severity 0.2                                                   loss 20  backing 0.64  claims 1.60  paid 40.00 c  p 2.500%  expected loss 0.500
+  severity 0.3                                                   loss 30  backing 0.49  claims 2.40  paid 20.42 c  p 4.898%  expected loss 1.469
+  severity 0.4                                                   loss 40  backing 0.36  claims 3.20  paid 11.25 c  p 8.889%  expected loss 3.556
+  severity 0.6                                                   loss 60  backing 0.16  claims 4.80  paid 3.33 c  p 30.000%  expected loss 18.000
+  bounds if severity <= 0.4 (Prop. 3)                            [1.00%, 8.889%]
+  ratio of bounds = C(0.4)/A(0.4)                                8.889
+  with full payment (p = 1%), expected loss from the event, USD trillion 0.10 to 0.60
+
+Sensitivity of s_c and of the upper bound (severity <= 0.4) to the slope of other claims
+  other claims 2% of the loss: s_c, upper bound                  0.268, 2.22%
+  other claims 4% of the loss: s_c, upper bound                  0.172, 4.44%
+  other claims 8% of the loss: s_c, upper bound                  0.101, 8.89%
+  leverage: assets 4, other claims 3 + 8s: s_c                   0.064
+
+Table 5 (Gamma = 1) and online Table B1: probabilities consistent with a price of 1 cent
+  lower bound with Gamma = 8 (claim paid in full at the threshold) 0.126%
+  paid in full at every severity: recovery at the worst severity (or average) 100.00 cents
+      Gamma = 1, kappa_L = 1.0                                   [1.000%, 1.000%]
+      Gamma = 40, kappa_L = 1.0                                  [0.025%, 1.000%]
+      Gamma = 40, kappa_L = 0.5                                  [0.025%, 1.980%]
+      Gamma = 8, kappa_L = 1.0                                   [0.126%, 1.000%]
+  equal priority, severity <= 0.4: recovery at the worst severity (or average) 11.25 cents
+      Gamma = 1, kappa_L = 1.0                                   [1.000%, 8.889%]
+      Gamma = 40, kappa_L = 1.0                                  [0.025%, 8.889%]
+      Gamma = 40, kappa_L = 0.5                                  [0.025%, 16.327%]
+      Gamma = 8, kappa_L = 1.0                                   [0.126%, 8.889%]
+  equal priority, severity <= 0.6: recovery at the worst severity (or average) 3.33 cents
+      Gamma = 1, kappa_L = 1.0                                   [1.000%, 30.000%]
+      Gamma = 40, kappa_L = 1.0                                  [0.025%, 30.000%]
+      Gamma = 40, kappa_L = 0.5                                  [0.025%, 46.154%]
+      Gamma = 8, kappa_L = 1.0                                   [0.126%, 30.000%]
+  equal priority, backing intact, severity <= 0.6: recovery at the worst severity (or average) 20.83 cents
+      Gamma = 1, kappa_L = 1.0                                   [1.000%, 4.800%]
+      Gamma = 40, kappa_L = 1.0                                  [0.025%, 4.800%]
+      Gamma = 40, kappa_L = 0.5                                  [0.025%, 9.160%]
+      Gamma = 8, kappa_L = 1.0                                   [0.126%, 4.800%]
+  equal priority, severity <= 0.6, density not rising: recovery at the worst severity (or average) 31.06 cents
+      Gamma = 1, kappa_L = 1.0                                   [1.000%, 3.219%]
+      Gamma = 40, kappa_L = 1.0                                  [0.025%, 3.219%]
+      Gamma = 40, kappa_L = 0.5                                  [0.025%, 6.238%]
+      Gamma = 8, kappa_L = 1.0                                   [0.126%, 3.219%]
+  equal priority, severity <= 0.6, leverage: recovery at the worst severity (or average) 8.21 cents
+      Gamma = 1, kappa_L = 1.0                                   [1.000%, 12.187%]
+      Gamma = 40, kappa_L = 1.0                                  [0.025%, 12.187%]
+      Gamma = 40, kappa_L = 0.5                                  [0.025%, 21.727%]
+      Gamma = 8, kappa_L = 1.0                                   [0.126%, 12.187%]
+  equal priority, severity <= 0.6, leverage, half safe: recovery at the worst severity (or average) 29.74 cents
+      Gamma = 1, kappa_L = 1.0                                   [1.000%, 3.362%]
+      Gamma = 40, kappa_L = 1.0                                  [0.025%, 3.362%]
+      Gamma = 40, kappa_L = 0.5                                  [0.025%, 6.505%]
+      Gamma = 8, kappa_L = 1.0                                   [0.126%, 3.362%]
+  subordination, severity <= 0.4: recovery at the worst severity (or average) 0.00 cents
+      Gamma = 1, kappa_L = 1.0                                   [1.000%, 100.000%]
+      Gamma = 40, kappa_L = 1.0                                  [0.025%, 100.000%]
+      Gamma = 40, kappa_L = 0.5                                  [0.025%, 100.000%]
+      Gamma = 8, kappa_L = 1.0                                   [0.126%, 100.000%]
+  density not rising, severity <= 0.99: upper bound              5.38%
+  leverage, backing intact, severity <= 0.6: upper bound         1.95%
+  leverage, half safe: floor on recovery 2/11, limit of the upper bound 0.1818, 5.50%
+
+Ratio of the bounds of the interval: claims-to-assets ratio (x + C)/K times capital destruction 1/phi
+    row C pool (other claims 4s), severity <= 0.2                0.80 x 1.56 = 1.25
+    unlevered pool, severity <= 0.4                              3.20 x 2.78 = 8.89
+    unlevered pool, severity <= 0.6                              4.80 x 6.25 = 30.00
+    backing intact, severity <= 0.6                              4.80 x 1.00 = 4.80
+    leverage, severity <= 0.6                                    1.95 x 6.25 = 12.19
+    leverage, half safe, severity <= 0.6                         1.95 x 1.72 = 3.36
+  B.6, Remark B1: uniform severity on [a, 0.99], step kernel 1 -> 8: p 5.749%
+  B.6, Remark B1: uniform severity on [a, 0.99], step kernel 1 -> 40: p 8.362%
+  density not rising, subordination, severity <= 0.4: upper bound 6.86%
+  CRRA 4 kernel ratio at severity 0.4 and 0.6                    7.72, 39.06
+  Fig. 2(a): equal priority, upper bound reaches 100% at s_bar   0.7543
+  Fig. 2(a): falling collateral, upper bound reaches 100% at s_bar 0.9000
+  Fig. 2(a): backing intact, limit of the upper bound as s_bar -> 1 8.00%
+  Fig. 2(a): falling collateral, recovery and both bounds at the threshold 0.9025, 1.108%
+
+Known CRRA kernel m ~ (1-s)^-gamma, two-point economies (non-event severity 0)
+  gamma = 2                                                      0.81%  1.61%  2.46%  3.39%  6.42%
+  gamma = 4                                                      0.66%  1.04%  1.22%  1.25%  1.09%
+
+Ladder economy: truncated Pareto severity, index 1.5, on [a, 0.8], event probability 2%
+  u = 0.05                                                       G 2.00000%  price 1.69489 c  ratio 0.8474
+  u = 0.10                                                       G 0.68658%  price 0.38147 c  ratio 0.5556
+  u = 0.20                                                       G 0.22222%  price 0.04623 c  ratio 0.2080
+  u = 0.40                                                       G 0.05805%  price 0.00329 c  ratio 0.0567
+  u = 0.60                                                       G 0.01713%  price 0.00032 c  ratio 0.0189
+  local tail index at u = 0.1                                    true 1.569  from prices 2.825
+  local tail index at u = 0.2                                    true 1.714  from prices 3.296
+  local tail index at u = 0.4                                    true 2.320  from prices 4.601
+  log-log slope on [0.1, 0.2]                                    true 1.627  from prices 3.045
+  log-log slope on [0.2, 0.4]                                    true 1.937  from prices 3.811
+  log-log slope on [0.4, 0.6]                                    true 3.010  from prices 5.718
+  expected loss in layer above a: prices / true                  0.4700
+  recovery at 0.6 and 0.8 (error amplification 1/r)              0.0333, 0.00625  (1/r = 30 and 160)
+  one claim at 5%: bounds, severity <= 0.8                       [1.695%, 100%]
+  same, density not rising: average recovery, upper bound        0.2324, 7.29%
+  kernel gamma = 2: log-log slope [0.2, 0.4], layer ratio        2.735, 0.670
+  kernel gamma = 4: log-log slope [0.2, 0.4], layer ratio        1.553, 1.147
+  kappa in the AI-growth example; price of full claim (cents)    0.516, 1.042
+  finite ladder, 1 thresholds (log-spaced)                       [1.695%, 100.000%]
+  finite ladder, 5 thresholds (log-spaced)                       [1.825%, 2.717%]
+  finite ladder, 10 thresholds (log-spaced)                      [1.890%, 2.229%]
+  finite ladder, 30 thresholds (log-spaced)                      [1.955%, 2.058%]
+  five thresholds (percent of world output)                      5.0, 8.7, 15.2, 26.4, 45.9
+
+Riskless rate with survivable disasters (Appendix B.5)
+  p_d from 1% to 2%, bond recovery 1.000                         first order -144.1 bp, exact (log) -141.1 bp
+  p_d from 1% to 2%, bond recovery 0.410                         first order -0.0 bp, exact (log) -0.0 bp
+
+Precision of the complement route (Appendix B.1)
+  complement route, D understated/overstated by 0.5%             -24.62% / +24.38%
+  event-claim route, same errors                                 +0.50% / -0.50%
+  ten-year horizon: 5 bp a year changes D by                     0.499%
+  ratio of error magnitudes, (1 - p)/p                           49
+  loss of 5% of world output relative to USD 715bn               6.99
+  hazards implied by 0.38% and 3% by 2100 (77 years), bp a year  0.49, 3.96
+  collateral needed for full payment at severity 0.4 (z/x)       2.78
+
+wrote fig1_recovery.png and fig2_identification.png to results

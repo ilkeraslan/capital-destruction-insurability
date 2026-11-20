@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper below."
+title: "Code for: Capital destruction and the limits of insurability"
+type: software
+authors:
+  - family-names: Aslan
+    given-names: Ilker
+    orcid: "https://orcid.org/0000-0001-9241-9420"
+    affiliation: "Kalaidos University of Applied Sciences"
+license: MIT
+repository-code: "https://github.com/ilkeraslan/"
+keywords:
+  - artificial intelligence
+  - catastrophe insurance
+  - counterparty risk
+  - insurability
+  - partial identification
+  - prediction markets
+preferred-citation:
+  type: report
+  title: "Capital destruction and the limits of insurability: What prices reveal about catastrophic risk from artificial intelligence"
+  authors:
+    - family-names: Aslan
+      given-names: Ilker
+      orcid: "https://orcid.org/0000-0001-9241-9420"
+      affiliation: "Kalaidos University of Applied Sciences"
+
+  institution:
+    name: "SSRN"
+  year: 2026
+  doi: "10.2139/ssrn.7198561"
+  url: "https://ssrn.com/abstract=7198561"
